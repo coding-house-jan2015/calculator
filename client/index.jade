@@ -2,7 +2,36 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Prototype
+    title Calculator
+    link(rel='stylesheet', href='/style.css')
   body
-    h1 Hello, World
+    #calculator
+      #display 0
+      #buttons
+        .row
+          button.number 7
+          button.number 8
+          button.number 9
+          button.operator(data-op='+') +
+          button.operator(data-op='e') e
+        .row
+          button.number 4
+          button.number 5
+          button.number 6
+          button.operator(data-op='-') -
+          button.operator(data-op='r') &#8730;
+        .row
+          button.number 1
+          button.number 2
+          button.number 3
+          button.operator(data-op='*') &times;
+          button#sign &plusmn;
+        .row
+          button.number 0
+          button#decimal .
+          button#clear c
+          button.operator(data-op='/') &divide;
+          button#evaluate =
+    p &copy; 2015 Chyld Medford
     script(src='/vendor/jquery/dist/jquery.js')
+    script(src='/main.js')
